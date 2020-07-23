@@ -543,7 +543,7 @@ class RegenerateThumbnails {
 			if ( in_array( $size, array( 'thumbnail', 'medium', 'medium_large', 'large' ) ) ) {
 				$thumbnail_sizes[ $size ]['width']  = (int) get_option( $size . '_size_w' );
 				$thumbnail_sizes[ $size ]['height'] = (int) get_option( $size . '_size_h' );
-				$thumbnail_sizes[ $size ]['crop']   = ( 'thumbnail' == $size ) ? (bool) get_option( 'thumbnail_crop' ) : false;
+				$thumbnail_sizes[ $size ]['crop']   = (bool) get_option( $size . '_crop' );
 			} elseif ( ! empty( $_wp_additional_image_sizes ) && ! empty( $_wp_additional_image_sizes[ $size ] ) ) {
 				$thumbnail_sizes[ $size ]['width']  = (int) $_wp_additional_image_sizes[ $size ]['width'];
 				$thumbnail_sizes[ $size ]['height'] = (int) $_wp_additional_image_sizes[ $size ]['height'];
